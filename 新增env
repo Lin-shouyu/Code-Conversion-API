@@ -1,0 +1,10 @@
+# 建立虛擬環境
+python -m venv k8s_api_env
+
+# 啟動虛擬環境（在命令提示字元中執行）
+k8s_api_env\Scripts\activate
+
+按下 <kbd>Ctrl+Shift+P</kbd>（macOS 為 <kbd>Cmd+Shift+P</kbd>）以開啟命令面板。
+輸入「Python: Select Interpreter」後按下 Enter。
+VSCode 會列出所有可用的 Python 解譯器，包括你所建立的虛擬環境。如果你已經在專案中建立了虛擬環境，通常會顯示像是 ./env/bin/python（Linux/macOS）或 .\env\Scripts\python.exe（Windows）的路徑。
+選擇你想切換的環境，這樣 VSCode 就會使用該環境來執行與除錯 Python 程式。

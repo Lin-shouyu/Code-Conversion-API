@@ -1,14 +1,15 @@
 from fastapi import FastAPI
-from routes import llm_routes
+from routes.llm_routes import router as llm_router
+from routes.k8s_routes import router as k8s_router
 
 app = FastAPI(title="Python Code Version Converter API")
 
-# 載入 LLM 路由
-app.include_router(llm_routes.router, prefix="/llm", tags=["LLM"])
+app.include_router(llm_router, prefix="/llm", tags=["LLM"])
+app.include_router(k8s_router, prefix="/k8s", tags=["K8s"])
 
 @app.get("/")
 def home():
-    return {"message": "Welcome to the Python Code Version Converter API"}
+    return {"message": "Welcome to the API"}
 
 if __name__ == "__main__":
     import uvicorn
