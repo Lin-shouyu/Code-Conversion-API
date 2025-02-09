@@ -9,7 +9,7 @@ __pycache__/
 *.so
 
 # 忽略虛擬環境（視你的環境管理工具）
-venv/
+k8s_api_env/
 .env/
 Pipfile
 Pipfile.lock
